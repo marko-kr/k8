@@ -20,4 +20,4 @@ spec:
           - path: /catalogue(/|$)(.*)
             backend:
               serviceName: get-image-service
-              servicePort: 22341
+              servicePort: 22342
