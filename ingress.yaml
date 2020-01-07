@@ -21,3 +21,7 @@ spec:
             backend:
               serviceName: get-image-service
               servicePort: 22342
+          - path: /share(/|$)(.*)
+            backend:
+              serviceName: share-service
+              servicePort: 22343
