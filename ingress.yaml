@@ -25,3 +25,7 @@ spec:
             backend:
               serviceName: share-service
               servicePort: 22343
+          - path: /comments(/|$)(.*)
+            backend:
+              serviceName: comments-service
+              servicePort: 22344
