@@ -17,3 +17,7 @@ spec:
             backend:
               serviceName: processing-service
               servicePort: 22341
+          - path: /catalogue(/|$)(.*)
+            backend:
+              serviceName: get-image-service
+              servicePort: 22341
