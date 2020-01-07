@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: proxy-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /upload(/|$)(.*)
+            backend:
+              serviceName: image-upload-service
+              servicePort: 22340
+          - path: /process(/|$)(.*)
+            backend:
+              serviceName: processing-service 	
+              servicePort: 22341
