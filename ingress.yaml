@@ -15,5 +15,5 @@ spec:
               servicePort: 22340
           - path: /process(/|$)(.*)
             backend:
-              serviceName: processing-service 	
+              serviceName: processing-service
               servicePort: 22341
