@@ -29,7 +29,3 @@ spec:
             backend:
               serviceName: comments-service
               servicePort: 22344
-          - path: /consul(/|$)(.*)
-            backend:
-              serviceName: consul-1-consul-ui 
-              servicePort: 80
