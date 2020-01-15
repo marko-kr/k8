@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-01-07T20:23:57Z"
+  labels:
+    app: share
+  name: share-service
+  namespace: default
+  resourceVersion: "309547"
+  selfLink: /api/v1/namespaces/default/services/share-service
+  uid: a1d2dbbc-318b-11ea-b724-42010aa401bf
+spec:
+  clusterIP: 10.0.13.143
+  ports:
+  - port: 22343
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: share
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

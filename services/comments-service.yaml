@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-01-07T20:55:52Z"
+  labels:
+    app: comments
+  name: comments-service
+  namespace: default
+  resourceVersion: "316156"
+  selfLink: /api/v1/namespaces/default/services/comments-service
+  uid: 17185580-3190-11ea-b724-42010aa401bf
+spec:
+  clusterIP: 10.0.7.210
+  ports:
+  - port: 22344
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: comments
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

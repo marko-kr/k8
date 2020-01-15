@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-01-07T16:44:48Z"
+  labels:
+    app: image-processing
+  name: processing-service
+  namespace: default
+  resourceVersion: "265774"
+  selfLink: /api/v1/namespaces/default/services/processing-service
+  uid: 04a2f192-316d-11ea-b050-42010aa40227
+spec:
+  clusterIP: 10.0.13.22
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31666
+    port: 22341
+    protocol: TCP
+    targetPort: 8081
+  selector:
+    app: image-processing
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 35.204.146.118

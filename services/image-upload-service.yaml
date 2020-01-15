@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-01-07T16:44:06Z"
+  labels:
+    app: image-upload
+  name: image-upload-service
+  namespace: default
+  resourceVersion: "265500"
+  selfLink: /api/v1/namespaces/default/services/image-upload-service
+  uid: eb94f80e-316c-11ea-b050-42010aa40227
+spec:
+  clusterIP: 10.0.6.96
+  ports:
+  - port: 22340
+    protocol: TCP
+    targetPort: 8081
+  selector:
+    app: image-upload
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-01-15T14:46:27Z"
+  labels:
+    app: get-image
+  name: get-image-service
+  namespace: default
+  resourceVersion: "2593408"
+  selfLink: /api/v1/namespaces/default/services/get-image-service
+  uid: cf0eaeea-37a5-11ea-b724-42010aa401bf
+spec:
+  clusterIP: 10.0.3.88
+  ports:
+  - port: 22342
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: get-image
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
