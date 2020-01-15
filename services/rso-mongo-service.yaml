@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-01-07T13:23:50Z"
+  labels:
+    app: mongo
+  name: rso-mongo-service
+  namespace: default
+  resourceVersion: "226255"
+  selfLink: /api/v1/namespaces/default/services/rso-mongo-service
+  uid: f1601c12-3150-11ea-b050-42010aa40227
+spec:
+  clusterIP: 10.0.1.7
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 32332
+    port: 27017
+    protocol: TCP
+    targetPort: 27017
+  selector:
+    app: mongo
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 34.90.110.136
